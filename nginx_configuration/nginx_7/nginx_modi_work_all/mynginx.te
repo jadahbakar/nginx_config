@@ -1,0 +1,26 @@
+
+module mynginx 1.0;
+
+require {
+	type var_run_t;
+	type etc_runtime_t;
+	type httpd_t;
+	type http_port_t;
+	class file { append read write };
+	class dir write;
+	class tcp_socket name_connect;
+}
+
+#============= httpd_t ==============
+
+#!!!! This avc is allowed in the current policy
+allow httpd_t etc_runtime_t:dir write;
+
+#!!!! This avc is allowed in the current policy
+allow httpd_t etc_runtime_t:file append;
+
+#!!!! This avc is allowed in the current policy
+allow httpd_t http_port_t:tcp_socket name_connect;
+
+#!!!! This avc is allowed in the current policy
+allow httpd_t var_run_t:file { read write };

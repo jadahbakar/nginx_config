@@ -1,0 +1,2 @@
+2020/08/09 13:17:48 [emerg] 69364#69364: unknown directive "more_set_headers" in /etc/nginx/conf.renstra/proxy.conf:14
+2020/08/09 13:17:56 [emerg] 69368#69368: unknown directive "more_set_headers" in /etc/nginx/conf.renstra/proxy.conf:14
